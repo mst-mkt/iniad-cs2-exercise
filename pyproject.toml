@@ -23,5 +23,41 @@ dev-dependencies = [
 ]
 managed = true
 
+[tool.rye.scripts]
+"dev" = {cmd = "python manage.py runserver"}
+"format" = {chain = ["pnpm run format", "format:py"]}
+"format:py" = {cmd = "ruff check --fix ./apps  --output-format=github"}
+"lint" = {chain = ["pnpm run lint", "lint:py"]}
+"lint:py" = {cmd = "ruff check ./apps  --output-format=github"}
+"migrate" = {cmd = "python manage.py migrate"}
+"migration" = {cmd = "python manage.py makemigrations"}
+"typecheck" = {cmd = "mypy ./apps"}
+
 [tool.hatch.metadata]
 allow-direct-references = true
+
+[tool.ruff]
+exclude = [
+  ".git",
+  ".venv",
+  ".mypy_cache",
+  ".ruff_cache",
+  "__init__.py",
+  "migrations",
+]
+fixable = ["ALL"]
+ignore = ["F401", "F841", "S311", "D"]
+indent-width = 4
+line-length = 100
+select = ["ALL"]
+target-version = "py312"
+unfixable = ["F401", "F841"]
+
+[tool.mypy]
+plugins = ["mypy_django_plugin.main"]
+python_version = "3.12"
+strict = true
+warn_unreachable = true
+
+[tool.django-stubs]
+django_settings_module = "config.settings"
