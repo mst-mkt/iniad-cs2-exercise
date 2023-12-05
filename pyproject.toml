@@ -1,27 +1,27 @@
 [project]
-name = "iniad-cs2-exercise"
-version = "0.1.0"
-description = "Add your description here"
 authors = [
-    { name = "mst-mkt", email = "s1f102303057@iniad.org" }
+  {name = "mst-mkt", email = "s1f102303057@iniad.org"},
 ]
 dependencies = [
-    "django>=4.2.8",
+  "django>=4.2.8",
 ]
+description = "Computer-Science-II Exercise at INIAD with Django"
+name = "iniad-cs2-exercise"
 readme = "README.md"
-requires-python = ">= 3.8"
+requires-python = ">= 3.12"
+version = "0.1.0"
 
 [build-system]
-requires = ["hatchling"]
 build-backend = "hatchling.build"
+requires = ["hatchling"]
 
 [tool.rye]
-managed = true
 dev-dependencies = [
-    "django-stubs>=4.2.6",
-    "ruff>=0.1.7",
-    "mypy>=1.7.1",
+  "django-stubs>=4.2.6",
+  "ruff>=0.1.7",
+  "mypy>=1.7.1",
 ]
+managed = true
 
 [tool.hatch.metadata]
 allow-direct-references = true
