@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     "app01",
     "forecast",
     "django_bootstrap5",
+    "fontawesome_5",
 ]
 
 MIDDLEWARE = [

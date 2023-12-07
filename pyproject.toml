@@ -5,6 +5,7 @@ authors = [
 dependencies = [
     "django>=4.2.8",
     "django-bootstrap5>=23.3",
+    "django-fontawesome-5>=1.0.18",
 ]
 description = "Computer-Science-II Exercise at INIAD with Django"
 name = "iniad-cs2-exercise"

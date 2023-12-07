@@ -10,4 +10,5 @@
 asgiref==3.7.2
 django==5.0
 django-bootstrap5==23.3
+django-fontawesome-5==1.0.18
 sqlparse==0.4.4
