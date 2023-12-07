@@ -38,7 +38,7 @@ managed = true
 "lint:template" = {cmd = "djlint ./templates/"}
 "migrate" = {cmd = "python manage.py migrate"}
 "migration" = {cmd = "python manage.py makemigrations"}
-"typecheck" = {cmd = "mypy ./"}
+"typecheck" = {cmd = "mypy ./app01 ./forecast"}
 
 [tool.hatch.metadata]
 allow-direct-references = true
