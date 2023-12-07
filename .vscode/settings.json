@@ -5,7 +5,7 @@
         "source.fixAll.stylelint": true
     },
     "[django-html]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.defaultFormatter": "monosans.djlint",
         "editor.indentSize": 4
     },
     "[python]": {

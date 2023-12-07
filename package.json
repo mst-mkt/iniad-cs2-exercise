@@ -1,9 +1,8 @@
 {
   "scripts": {
-    "format:html": "prettier --write \"./templates/**/*.html\"",
     "format:css": "prettier --write \"./static/**/*.css\" && stylelint --fix \"./static/**/*.css\"",
     "format:js": "eslint --fix \"./static/**/*.js\" && prettier --write \"./static/**/*.js\"",
-    "format": "npm run format:html && npm run format:css && npm run format:js",
+    "format": "npm run format:css && npm run format:js",
     "lint:css": "stylelint \"./static/**/*.css\"",
     "lint:js": "eslint \"./static/**/*.js\"",
     "lint": "npm run lint:css && npm run lint:js"
@@ -11,8 +10,7 @@
   "devDependencies": {
     "eslint": "^8.55.0",
     "eslint-config-prettier": "^9.1.0",
-    "prettier": "2",
-    "prettier-plugin-django": "^0.5.9",
+    "prettier": "^3.1.0",
     "stylelint": "^15.11.0",
     "stylelint-config-prettier": "^9.0.5",
     "stylelint-config-recess-order": "^4.4.0",

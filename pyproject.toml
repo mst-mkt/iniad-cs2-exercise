@@ -20,15 +20,18 @@ dev-dependencies = [
   "django-stubs>=4.2.6",
   "ruff>=0.1.7",
   "mypy>=1.7.1",
+  "djlint>=1.34.0",
 ]
 managed = true
 
 [tool.rye.scripts]
 "dev" = {cmd = "python manage.py runserver"}
-"format" = {chain = ["pnpm run format", "format:py"]}
+"format" = {chain = ["pnpm run format", "format:py", "format:template"]}
 "format:py" = {cmd = "ruff check --fix ./apps  --output-format=github"}
+"format:template" = {cmd = "djlint --reformat ./templates/"}
 "lint" = {chain = ["pnpm run lint", "lint:py"]}
 "lint:py" = {cmd = "ruff check ./apps  --output-format=github"}
+"lint:template" = {cmd = "djlint ./templates/"}
 "migrate" = {cmd = "python manage.py migrate"}
 "migration" = {cmd = "python manage.py makemigrations"}
 "typecheck" = {cmd = "mypy ./apps"}
