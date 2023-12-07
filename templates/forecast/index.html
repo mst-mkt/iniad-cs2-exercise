@@ -21,9 +21,11 @@
                                 <h5 class="card-title">Day {{ forloop.counter }}</h5>
                                 <p class="card-text">{{ item }}</p>
                                 {% if item == 'Rainy' %}
-                                    <img src="https://icongr.am/fontawesome/umbrella.svg"
-                                         alt="umbrella"
-                                         class="img-fluid" />
+                                    {% fa5_icon 'umbrella' 'fas' %}
+                                {% elif item == 'Cloudy' %}
+                                    {% fa5_icon 'cloud' 'fas' %}
+                                {% elif item == 'Sunny' %}
+                                    {% fa5_icon 'sun' 'fas' %}
                                 {% endif %}
                             </div>
                         </div>
