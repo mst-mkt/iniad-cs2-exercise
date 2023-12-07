@@ -7,5 +7,18 @@
     </head>
     <body>
         <h1>{{ title }}</h1>
+        <ul>
+            {% for item in forecasts %}
+                <li>
+                    Day {{ forloop.counter }}: {{ item }}
+                    {% if item == 'Rainy' %}
+                        <img src="https://icongr.am/fontawesome/umbrella.svg" alt="umbrella" />
+                    {% endif %}
+                </li>
+            {% endfor %}
+        </ul>
+        <p>
+            <a href="{% url 'root' %}">Top page</a>
+        </p>
     </body>
 </html>
