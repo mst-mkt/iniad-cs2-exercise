@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "app01",
     "forecast",
+    "django_bootstrap5",
 ]
 
 MIDDLEWARE = [

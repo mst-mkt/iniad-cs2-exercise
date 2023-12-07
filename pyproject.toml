@@ -3,7 +3,8 @@ authors = [
   {name = "mst-mkt", email = "s1f102303057@iniad.org"},
 ]
 dependencies = [
-  "django>=4.2.8",
+    "django>=4.2.8",
+    "django-bootstrap5>=23.3",
 ]
 description = "Computer-Science-II Exercise at INIAD with Django"
 name = "iniad-cs2-exercise"
