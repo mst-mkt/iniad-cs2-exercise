@@ -1,9 +1,12 @@
+{% load django_bootstrap5 %}
 <!DOCTYPE html>
 <html lang="ja">
     <head>
         <title>Template</title>
         <meta charset="utf-8" />
         <meta content="django forecast application" name="description" />
+        {% bootstrap_css %}
+        {% bootstrap_javascript %}
     </head>
     <body>
         <h1>{{ title }}</h1>
