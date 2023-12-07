@@ -2,6 +2,7 @@ from django.contrib import admin
 from django.urls import path
 
 import app01.views
+import forecast.views
 
 urlpatterns = [
     path("admin/", admin.site.urls),
